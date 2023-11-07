@@ -8,7 +8,10 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import Root from './routes/root'
-import Contact from "./routes/contact";
+import Contact from "./routes/contact"
+import G2 from './routes/g2'
+import ECharts from './routes/echarts'
+import MyCanvas from './routes/my-canvas'
 import ErrorPage from './error-page'
 
 const router = createBrowserRouter([
@@ -16,6 +19,18 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+  },
+  // {
+  //   path: "g2",
+  //   element: <G2 />,
+  // },
+  // {
+  //   path: "echarts",
+  //   element: <ECharts />,
+  // },
+  {
+    path: "my-canvas",
+    element: <MyCanvas />,
   },
   {
     path: "contacts/:contactId",
