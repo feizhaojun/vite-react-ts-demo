@@ -70,13 +70,14 @@ function GoogleMapContent() {
       geocoder.geocode({ latLng: position }, (res = []) => {
         console.log('geocode:', res);
         if (res?.length) {
-          const [address = {}] = res;
+          const [address = {}] = JSON.parse(JSON.stringify(res));
           const { formatted_address: formattedAddress } = address;
           const data = {
             cmd: 'googleMap',
             data: {
               position,
               formattedAddress,
+              address,
             }
           };
           console.log('postMessage send:', data);
