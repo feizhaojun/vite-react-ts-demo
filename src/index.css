@@ -170,6 +170,7 @@ form[action$="destroy"] button {
 
 #root {
   display: flex;
+  justify-content: space-evenly;
   height: 100%;
   width: 100%;
 }

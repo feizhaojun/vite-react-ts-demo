@@ -7,17 +7,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
-import Root from './routes/root'
-import Contact from "./routes/contact"
-import G2 from './routes/g2'
-import ECharts from './routes/echarts'
-import MyCanvas from './routes/my-canvas'
+// import Root from './routes/root'
+import GoogleMap from './routes/google-map';
+// import Contact from "./routes/contact"
+// import G2 from './routes/g2'
+// import ECharts from './routes/echarts'
+// import MyCanvas from './routes/my-canvas'
+// import List from './routes/list'
 import ErrorPage from './error-page'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <GoogleMap />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/google-map/",
+    element: <GoogleMap />,
     errorElement: <ErrorPage />,
   },
   // {
@@ -28,14 +35,18 @@ const router = createBrowserRouter([
   //   path: "echarts",
   //   element: <ECharts />,
   // },
-  {
-    path: "my-canvas",
-    element: <MyCanvas />,
-  },
-  {
-    path: "contacts/:contactId",
-    element: <Contact />,
-  },
+  // {
+  //   path: "my-canvas",
+  //   element: <MyCanvas />,
+  // },
+  // {
+  //   path: "list",
+  //   element: <List />,
+  // },
+  // {
+  //   path: "contacts/:contactId",
+  //   element: <Contact />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -1,0 +1,20 @@
+/* Google 地图自带的蓝边 bug，Google 说会在后续版本修复 */
+.gm-style iframe + div { border: none !important; }
+
+.googleMapCls {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-250px, -100px);
+}
+
+.inputWrapper {
+  width: 267px;
+  height: 40px;
+  display: flex;
+  flex: 1;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+}
